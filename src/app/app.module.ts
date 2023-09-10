@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './components/child/child.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TestComponent } from './components/test/test.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildComponent,
-    TestComponent
+    TestComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

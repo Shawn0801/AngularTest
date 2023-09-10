@@ -1,0 +1,3 @@
+<p>parent works!</p>
+<input type="text" [(ngModel)]="inputData">
+<app-child [data]="inputData" (emitEvent)="child($event)"></app-child>

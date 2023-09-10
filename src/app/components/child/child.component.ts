@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,6 +7,8 @@ import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
+  @Input() data = '';
+  @Output() emitEvent = new EventEmitter<string>();
 
   constructor() { }
 
@@ -16,4 +18,7 @@ export class ChildComponent implements OnInit {
     console.log(date);
   }
 
+  emitData() {
+    this.emitEvent.emit('已送出');
+  }
 }

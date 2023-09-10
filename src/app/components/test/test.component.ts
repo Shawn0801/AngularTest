@@ -12,7 +12,7 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  fontsize = 12;
+  fontsize = 16;
   onSetFont(value: number): void {
     this.fontsize += value;
   }
